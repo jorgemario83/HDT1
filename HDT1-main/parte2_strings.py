@@ -144,9 +144,15 @@ for i, resena in enumerate(resenas, start=1):
     # TODO: Imprime los resultados con el formato esperado
     palabras_reseña = resena.split()
     total_palabras = len(palabras_reseña)
-    total_vocales = sum(1 for c in resena if c in vocales)
-    palabra_mas_larga = max(palabras_reseña, key=len) if palabras_reseña else ""
+# ... dentro de tu ciclo for principal ...
 
+    palabras_reseña = resena.split()
+    total_palabras = len(palabras_reseña)
+    total_vocales = 0
+    for letra in resena:
+        if letra in vocales:
+            total_vocales += 1  
+    palabra_mas_larga = max(palabras_reseña, key=len) if palabras_reseña else ""
     positivas = sum(1 for p in palabras_reseña if p in palabras_positivas)
     negativas = sum(1 for p in palabras_reseña if p in palabras_negativas)
 

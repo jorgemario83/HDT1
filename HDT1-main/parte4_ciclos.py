@@ -47,10 +47,9 @@ for hora, afluencia in enumerate(afluencia_por_hora):
         # Bloque de cálculos (Alineado a la izquierda, fuera del 'else')
         total_dia += afluencia
         
-        if afluencia > afluencia_pico:
-            # Estas dos líneas llevan sangría porque pertenecen al 'if'
-            hora_pico = hora
-            afluencia_pico = afluencia
+if afluencia > afluencia_pico:
+    hora_pico = hora
+    afluencia_pico = afluencia
 
       # reemplaza este pass con tu lógica
 

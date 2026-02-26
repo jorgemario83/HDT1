@@ -29,6 +29,16 @@ cantidad      = 5
 # --- Tu código aquí ---
 
 precio_final = 0   # reemplaza con tu lógica
+descuento = 0
+if es_ufm and carnet_valido:
+    if 0.25 > descuento:
+        descuento = 0.25
+if dias_anticipacion <= 30:
+    if 0.15 > descuento:
+        descuento = 0.15
+if edad <= 12 or edad > 64:
+    if 0.50 > descuento:
+        descuento = 0.50
 
 # TODO 1: Determina el precio base según zona
 #         (campo, gradería, preferencia, vip o zona inválida)
@@ -108,7 +118,7 @@ for i, caso in enumerate(casos_acceso, start=1):
     zona, edad, entrada, pulsera, acompañante, prohibicion = caso
     if not entrada:
         print(f"Caso {i}: [DENEGADO] Sin entrada")
-    elif zona == "vip" or zona == "backstage" and not pulsera:
+    elif (zona == "vip" or zona == "backstage") and not pulsera:
         print(f"Caso {i}: [DENEGADO] necesita pulsera especial")
     elif edad < 18 and not acompañante:
         print(f"Caso {i}: [DENEGADO] Menor sin acompañante")

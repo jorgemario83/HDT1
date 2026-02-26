@@ -172,9 +172,6 @@ while opcion != "5":
     elif opcion == "5":
     # ----------------------------------------------------------
         print("\n¡Gracias por usar la taquilla de DataFest 2026!")
-        print("Nos vemos en el festival. 🎵")
-        print("\n¡Gracias por usar la taquilla de DataFest 2026!")
-        print("Nos vemos en el festival. 🎵")
     # ----------------------------------------------------------
     else:
     # ----------------------------------------------------------
